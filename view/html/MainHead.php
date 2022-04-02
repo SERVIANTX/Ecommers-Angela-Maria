@@ -23,3 +23,5 @@
 
 <!-- Custom stlylesheet -->
 <link type="text/css" rel="stylesheet" href="../../assets/css/style.css" />
+
+<link type="text/css" rel="stylesheet" href="../../assets/css/jquery-ui.css" /> 

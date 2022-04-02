@@ -1,9 +1,6 @@
 const cargarProductos = async () => {
     try {
         const respuesta = await fetch(`http://localhost/AngelaMaria/public/api/productos`);
-
-        console.log(respuesta);
-
         // Si la respuesta es correcta
         if (respuesta.status === 200) {
             const datos = await respuesta.json();
@@ -11,6 +8,8 @@ const cargarProductos = async () => {
             let productos = '';
             datos.data.forEach(data => {
                 productos += `
+				<div class="col-md-3 col-xs-1">
+					<div class="product">
 					<div class="product-img">
 						<img src="${data.imagen}" alt="">
 						<div class="product-label">
@@ -38,6 +37,8 @@ const cargarProductos = async () => {
 					<div class="add-to-cart">
 						<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 					</div>
+					</div>
+					</div>
             `;
             });
 
@@ -52,9 +53,85 @@ const cargarProductos = async () => {
         }
 
     } catch (error) {
-        console.log(error);
+
     }
 
 }
 
 cargarProductos();
+
+$(document).ready(function() {
+    $(function()
+        {
+    
+    
+            $.ajax({
+                type:'GET',
+                url: "http://localhost/AngelaMaria/public/api/productosnombre",
+                success:function(response)
+                {
+					let salida = [];
+                    $.each(response,function(indice,fila){       
+                        
+                        
+
+						let array2 = [];
+						array2['value'] = fila.nombre_producto;
+						array2['label'] = "<img src='"+fila.imagen+"' width=\"70\"/> "+fila.nombre_producto+'';
+						salida.push( array2);
+						
+                    });
+
+					var items = salida;
+					$("#comboproductos").autocomplete({
+
+						source: items,
+						minLength:1,
+						select: function(event, ui) {
+							var params = {
+							  equipo: ui.item.value
+							};
+
+							 $.ajax({
+								type:'GET',
+							 	url: "http://localhost/AngelaMaria/public/api/productosdatos/"+params.equipo,
+								
+							})
+							.done(function( response ) {
+
+								$.each(response,function(indice,fila){       
+
+									$("#idventacliente").attr("value", fila.id);
+									
+									let producto = fila;
+
+										localStorage.setItem("producto", JSON.stringify(fila) );
+								});
+								window.location = "/Ecommers-Angela-Maria/view/product/";
+								
+							});
+
+						}})
+						.data('ui-autocomplete')._renderItem = function(ul, item){
+							return $("<li class='ui-autocomplete-row'></li>")
+								.data("item.autocomplete", item)
+								.append(item.label)
+								.appendTo(ul);
+						  };
+
+						
+						
+					  
+                   
+                }
+               
+				
+    
+            });
+        });
+    
+    
+    });
+
+
+
