@@ -35,7 +35,7 @@
                 <div class="header-search">
                     <form>
 
-                        <input class="input-select" placeholder="Search here" id="comboproductos">
+                        <input class="input-select col-md-8 " placeholder="Search here" id="comboproductos">
                         <input  type="hidden" id="idventacliente">   
                         <button class="search-btn">Search</button>
                     </form>
