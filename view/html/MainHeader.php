@@ -8,7 +8,7 @@
         </ul>
         <ul class="header-links pull-right">
             <li><a href="#"><i class="fa fa-dollar"></i> PEN</a></li>
-            <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+            <li><a href="../login"><i class="fa fa-user-o"></i> Iniciar Sessión</a></li>
         </ul>
     </div>
 </div>
@@ -23,7 +23,7 @@
             <!-- LOGO -->
             <div class="col-md-3">
                 <div class="header-logo">
-                    <a href="#" class="logo">
+                    <a href="../home" class="logo">
                         <img src="../../assets/img/logo.png" alt="">
                     </a>
                 </div>
