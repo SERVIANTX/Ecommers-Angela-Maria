@@ -1,11 +1,17 @@
-// var _token = localStorage.getItem('_token');
 
-//             if(!_token)
-//             {
-//                 window.location = "../login";
-//             }else{
-                
-//             }
+
+
+$(document).ready(function() {
+        if(window.location.pathname == "/Ecommers-Angela-Maria/view/checkout/"){
+            var _token = localStorage.getItem('_token');
+
+            if(!_token)
+            {
+                window.location = "../login";
+            }else{
+            }
+        }
+    });
 
 var boton = document.getElementById('registrarse');
 
@@ -17,7 +23,7 @@ boton.addEventListener('click',function()
             {
                 method:"POST",
                 url:"http://localhost/AngelaMaria/public/api/ingresarCliente",
-                data:{name:$("#txtnombre").val(),apellidos:$("#txtapellidos").val(),direccion:$("#txtdireccion").val(),numero_documento:$("#txtnumdocumento").val(),email:$("#txtemail").val(),password:$("#txtpassword").val()}
+                data:{name:$("#txtnombre").val(),apellidos:$("#txtapellidos").val(),direccion:$("#txtdireccion").val(),numero_documento:$("#txtnumdocumento").val(),telefono:$("#txttelefono").val(),email:$("#txtemail").val(),password:$("#txtpassword").val()}
                 
             
             }
@@ -28,6 +34,7 @@ boton.addEventListener('click',function()
             $("#txtapellidos").val("");
             $("#txtdireccion").val("");
             $("#txtnumdocumento").val("");
+            $("#txttelefono").val("");
             $("#txtemail").val("");
             $("#txtpassword").val("");
             $("#create-account").checked = false;
@@ -61,9 +68,9 @@ boton.addEventListener('click',function()
 
 });
 
-    var boton = document.getElementById('iniciarsesion');
+    var enviarboton = document.getElementById('iniciarsesion');
 
-    boton.addEventListener('click',function()
+    enviarboton.addEventListener('click',function()
     {
         $(function () {
             $.validator.setDefaults({
@@ -97,7 +104,7 @@ boton.addEventListener('click',function()
     
                                         });
     
-                                        window.location="../../view/carrito/";
+                                        window.location="../../view/checkout/";
                                     });
                             
                         });

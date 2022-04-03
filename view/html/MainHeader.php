@@ -47,7 +47,7 @@
                 <div class="header-ctn">
                     <!-- Wishlist -->
                     <div class="col-md-5">
-                        <a href="#">
+                        <a href="../../view/Lista_de_Deseos/">
                             <i class="fa fa-heart-o"></i>
                             <span>Tu lista de deseos</span>
                             <div class="qty">2</div>
@@ -91,8 +91,8 @@
                                 <h5>SUBTOTAL: $2940.00</h5>
                             </div>
                             <div class="cart-btns">
-                                <a href="#">Ver Carrito</a>
-                                <a href="#">Ir a pagar <i class="fa fa-arrow-circle-right"></i></a>
+                                <a href="../../view/carrito/">Ver Carrito</a>
+                                <a href="../../view/checkout/">Ir a pagar <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>

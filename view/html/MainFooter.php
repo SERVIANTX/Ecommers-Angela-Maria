@@ -26,10 +26,10 @@
                     <div class="footer">
                         <h3 class="footer-title">Políticas y Condiciones</h3>
                         <ul class="footer-links">
-                            <li><a href="#">Política de datos personales</a></li>
-                            <li><a href="#">Derecho ARCO y privacidad</a></li>
-                            <li><a href="#">Condiciones de promociones</a></li>
-                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="../../view/politicas/">Política de datos personales</a></li>
+                            <li><a href="../../view/politicas/">Derecho ARCO y privacidad</a></li>
+                            <li><a href="../../view/politicas/">Condiciones de promociones</a></li>
+                            <li><a href="../../view/politicas/">Términos y condiciones</a></li>
                         </ul>
                     </div>
                 </div>

@@ -21,7 +21,7 @@
 <script src="../../app/listarproductos/productosController.js"></script>
 <script src="../../app/listarproductos/productoCargaController.js"></script>
 <script src="../../app/listarproductos/categoriasHomeController.js"></script>
-<script src="../../app/listarproductos/carrito.js"></script>
+<script src="../../app/listarproductos/checkoutController.js"></script>
 <script src="../../app/listarproductos/vendidosController.js"></script>
 <script src="../../app/listarproductos/categoriasController.js"></script>
 <script src="../../app/listarproductos/loginRegisterController.js"></script>

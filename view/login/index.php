@@ -42,10 +42,13 @@
                             <input class="input" type="text" name="txtapellidos" id="txtapellidos" placeholder="Apellidos" require>
                         </div>
                         <div class="form-group">
-                            <input class="input" type="email" name="txtdireccion" id="txtdireccion" placeholder="Dirección" require>
+                            <input class="input" type="text" name="txtdireccion" id="txtdireccion" placeholder="Dirección" require>
                         </div>
                         <div class="form-group">
-                            <input class="input" type="email" name="txtnumdocumento" id="txtnumdocumento" placeholder="Numero de DNI" require>
+                            <input class="input" type="text" name="txtnumdocumento" id="txtnumdocumento" placeholder="Numero de DNI" require>
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="text" name="txttelefono" id="txttelefono" placeholder="Numero de Telefono" require>
                         </div>
                         <div class="form-group">
                             <input class="input" type="email" name="txtemail" id="txtemail" placeholder="Correo" require>
