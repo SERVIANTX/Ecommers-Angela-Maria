@@ -24,7 +24,7 @@
             <div class="col-md-3">
                 <div class="header-logo">
                     <a href="../home" class="logo">
-                        <img src="../../assets/img/logo.png" alt="">
+                        <img src="../../assets/img/LOGO-AM.png" alt="" width="80%">
                     </a>
                 </div>
             </div>
