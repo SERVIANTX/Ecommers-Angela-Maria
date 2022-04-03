@@ -35,9 +35,8 @@
                 <div class="header-search">
                     <form>
 
-                        <input class="input-select col-md-8 " placeholder="Search here" id="comboproductos">
-                        <input  type="hidden" id="idventacliente">   
-                        <button class="search-btn">Search</button>
+                        <input class="input-select col-md-8 " placeholder="Busca aqui" id="comboproductos">
+                        <button class="search-btn">Buscar</button>
                     </form>
                 </div>
             </div>
@@ -47,10 +46,10 @@
             <div class="col-md-3 clearfix">
                 <div class="header-ctn">
                     <!-- Wishlist -->
-                    <div>
+                    <div class="col-md-5">
                         <a href="#">
                             <i class="fa fa-heart-o"></i>
-                            <span>Your Wishlist</span>
+                            <span>Tu lista de deseos</span>
                             <div class="qty">2</div>
                         </a>
                     </div>
@@ -60,7 +59,7 @@
                     <div class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                             <i class="fa fa-shopping-cart"></i>
-                            <span>Your Cart</span>
+                            <span>Tu carrito</span>
                             <div class="qty">3</div>
                         </a>
                         <div class="cart-dropdown">
@@ -92,8 +91,8 @@
                                 <h5>SUBTOTAL: $2940.00</h5>
                             </div>
                             <div class="cart-btns">
-                                <a href="#">View Cart</a>
-                                <a href="#">Checkout <i class="fa fa-arrow-circle-right"></i></a>
+                                <a href="#">Ver Carrito</a>
+                                <a href="#">Ir a pagar <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -123,8 +122,9 @@
 				<!-- responsive-nav -->
 				<div id="responsive-nav">
 					<!-- NAV -->
+                  
 					<ul class="main-nav nav navbar-nav" id="LlamarCategoria">
-						<li class="active"><a href="#">Home</a></li>
+                         <li class="active"><a href="#">Inicio</a></li>
 					</ul>
 					<!-- /NAV -->
 				</div>
