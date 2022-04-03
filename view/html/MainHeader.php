@@ -124,7 +124,7 @@
 					<!-- NAV -->
                   
 					<ul class="main-nav nav navbar-nav" id="LlamarCategoria">
-                         <li class="active"><a href="#">Inicio</a></li>
+                         <li class="active"><a href="../../view/home/">Inicio</a></li>
 					</ul>
 					<!-- /NAV -->
 				</div>

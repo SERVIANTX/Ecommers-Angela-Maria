@@ -14,29 +14,6 @@
     </header>
     <!-- /HEADER -->
 
-    <!-- NAVIGATION -->
-    <nav id="navigation">
-        <!-- container -->
-        <div class="container">
-            <!-- responsive-nav -->
-            <div id="responsive-nav">
-                <!-- NAV -->
-                <ul class="main-nav nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Hot Deals</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">Laptops</a></li>
-                    <li><a href="#">Smartphones</a></li>
-                    <li><a href="#">Cameras</a></li>
-                    <li><a href="#">Accessories</a></li>
-                </ul>
-                <!-- /NAV -->
-            </div>
-            <!-- /responsive-nav -->
-        </div>
-        <!-- /container -->
-    </nav>
-    <!-- /NAVIGATION -->
 
     <!-- BREADCRUMB -->
     <div id="breadcrumb" class="section">
@@ -52,22 +29,29 @@
             <div class="row">
 
                 <div class="col-md-6 order-details">
+                    <form>
 
                     <div class="billing-details">
                         <div class="section-title text-center">
                             <h3 class="title">REGISTRARSE</h3>
                         </div>
                         <div class="form-group">
-                            <input class="input" type="text" name="first-name" placeholder="Nombre">
+                            <input class="input" type="text" name="txtnombre" id="txtnombre" placeholder="Nombre" require>
                         </div>
                         <div class="form-group">
-                            <input class="input" type="text" name="last-name" placeholder="Apellidos">
+                            <input class="input" type="text" name="txtapellidos" id="txtapellidos" placeholder="Apellidos" require>
                         </div>
                         <div class="form-group">
-                            <input class="input" type="email" name="email" placeholder="Email">
+                            <input class="input" type="email" name="txtdireccion" id="txtdireccion" placeholder="Dirección" require>
                         </div>
                         <div class="form-group">
-                            <input class="input" type="password" name="password" placeholder="Contraseña">
+                            <input class="input" type="email" name="txtnumdocumento" id="txtnumdocumento" placeholder="Numero de DNI" require>
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="email" name="txtemail" id="txtemail" placeholder="Correo" require>
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="password" name="txtpassword" id="txtpassword" placeholder="Contraseña" autocomplete>
                         </div>
                         <div class="form-group">
                             <div class="input-checkbox">
@@ -78,40 +62,42 @@
                                 </label>
                             </div>
                         </div>
-                        <a href="#" class="primary-btn order-submit">Registrarse</a>
+                        <a href="#" class="primary-btn order-submit" id="registrarse">Registrarse</a>
                     </div>
-
+                    </form>
                 </div>
 
                 <div class="col-md-6 order-details">
-
+                <form id="inicioSesion">
                     <div class="billing-details">
                         <div class="section-title text-center">
+
                             <h3 class="title">INICIAR SESIÓN</h3>
                         </div>
                         <br>
                         <br>
                         <div class="form-group">
-                            <input class="input" type="email" name="email" placeholder="Email">
+                            <input class="input" type="email" name="txtcorreo" id="txtcorreo" placeholder="Correo" >
                         </div>
                         <div class="form-group">
-                            <input class="input" type="password" name="password" placeholder="Contraseña">
+                            <input class="input" type="password" name="txtcontraseña" id="txtcontraseña" placeholder="Contraseña"  autocomplete >
                         </div>
                         <div class="form-group">
                             <div class="input-checkbox">
                                 <input type="checkbox" id="register-account">
                                 <label for="register-account">
                                     <span></span>
-                                    Aceptar los terminos y condiciones.
+                                    Recordarme
                                 </label>
                             </div>
                         </div>
+                        
                         <br>
                         <br>
                         <br>
-                        <a href="#" class="primary-btn order-submit">Iniciar Sesión</a>
+                        <button type="submit" class="primary-btn" id="iniciarsesion">Iniciar Sesión</button>
                     </div>
-
+                    </form>
                 </div>
 
             </div>
@@ -143,3 +129,5 @@
 </body>
 
 </html>
+
+

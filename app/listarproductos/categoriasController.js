@@ -15,7 +15,7 @@ const cargarCategoria = async () => {
 							</div>
 							<div class="shop-body">
 								<h3>${data.nombre_categoria}</h3>
-								<a href="#" class="cta-btn">Compra Ahora <i class="fa fa-arrow-circle-right"></i></a>
+								<a href="../../view/store/index.php?id=${data.id}" class="cta-btn">Compra Ahora <i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 					</div>

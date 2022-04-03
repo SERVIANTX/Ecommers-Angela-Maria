@@ -47,7 +47,6 @@
 					<div class="col-md-12">
 						<div class="section-title">
 							<h3 class="title">Todos Los Productos</h3>
-
 						</div>
 					</div>
 					<!-- /section title -->

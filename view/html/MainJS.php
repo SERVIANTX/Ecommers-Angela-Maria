@@ -12,15 +12,20 @@
 <script src="../../assets/js/jquery-ui.js"></script>
 
 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script src="../../assets/js/jquery-validation/jquery.validate.min.js"></script>
+<script src="../../assets/js/jquery-validation/additional-methods.min.js"></script>
 
 
 <script src="../../app/listarproductos/productosController.js"></script>
 <script src="../../app/listarproductos/productoCargaController.js"></script>
-<script src="../../app/listarproductos/categorias.js"></script>
+<script src="../../app/listarproductos/categoriasHomeController.js"></script>
 <script src="../../app/listarproductos/carrito.js"></script>
 <script src="../../app/listarproductos/vendidosController.js"></script>
 <script src="../../app/listarproductos/categoriasController.js"></script>
+<script src="../../app/listarproductos/loginRegisterController.js"></script>
+
 
 
 
