@@ -316,7 +316,6 @@ const cargarProducto = async () => {
 
             
         } else {
-            console.log('Hubo un error.');
         }
 
     } catch (error) {

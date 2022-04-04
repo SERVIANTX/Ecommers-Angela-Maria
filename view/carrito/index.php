@@ -47,12 +47,14 @@
 							</tr>
 						</thead>
 						<tbody>
-							
+
 						</tbody>
 
 					</table>
 
-					<a href="../../view/checkout/" class="primary-btn order-submit" id="registrarse">Ir a Pagar</a>
+					<div id="carritobutton">
+					
+					</div>
 			</div>
 		</div>
 	</div>

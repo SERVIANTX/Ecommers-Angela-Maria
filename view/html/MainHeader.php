@@ -72,9 +72,9 @@
                             <div class="cart-summary" id="contenedordetallescarrito">
                                 
                             </div>
-                            <div class="cart-btns">
+                            <div class="cart-btns" id = "checkout">
                                 <a href="../../view/carrito/">Ver Carrito</a>
-                                <a href="../../view/checkout/">Ir a pagar <i class="fa fa-arrow-circle-right"></i></a>
+                              
                             </div>
                         </div>
                     </div>

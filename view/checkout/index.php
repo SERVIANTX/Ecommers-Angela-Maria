@@ -35,8 +35,10 @@
 					<div class="order-notes">
 						<textarea class="input" placeholder="Notas de la Orden"></textarea>
 					</div>
-					<div class="form-group" id="EnviarTotal">
-						
+					<div class="form-group" >
+						<!-- <form id="EnviarTotal" method="POST">
+
+						</form> -->
 					</div>
 					<!-- /Order notes -->
 				</div>
@@ -75,10 +77,10 @@
 						<input type="checkbox" id="terms">
 						<label for="terms">
 							<span></span>
-							<a>Aceptas los <a href="../../view/politicas/">Terminos y Condiciones</a>
+							<a>Aceptas los <a href="../../view/politicas/" target="_blank">Terminos y Condiciones</a>
 						</label>
 					</div>
-					<script src="../../app/listarproductos/capturadorController.js"></script>
+					<!-- <script src="../../app/listarproductos/capturadorController.js"></script> -->
 					<div class="form-group" >
 						<?php require "../../app/mercadopago/mercadopago.php" ?>
 					</div>

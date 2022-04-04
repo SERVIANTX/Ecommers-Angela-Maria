@@ -44,7 +44,6 @@ const cargarProductos = async () => {
         } else if (respuesta.status === 404) {
             console.log('El producto que buscas no existe.');
         } else {
-            console.log('Hubo un error.');
         }
 
     } catch (error) {

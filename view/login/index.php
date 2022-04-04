@@ -65,7 +65,7 @@
                                 </label>
                             </div>
                         </div>
-                        <a href="#" class="primary-btn order-submit" id="registrarse">Registrarse</a>
+                        <button type="submit" class="primary-btn order-submit" id="registrarse">Registrarse</button>
                     </div>
                     </form>
                 </div>

@@ -14,62 +14,66 @@ $(document).ready(function() {
     });
 
 var boton = document.getElementById('registrarse');
-
-boton.addEventListener('click',function()
+if ( window.location.pathname == "/Ecommers-Angela-Maria/view/login/")
 {
-    if (document.getElementById('create-account').checked){
-        
-        $.ajax(
-            {
-                method:"POST",
-                url:"http://localhost/AngelaMaria/public/api/ingresarCliente",
-                data:{name:$("#txtnombre").val(),apellidos:$("#txtapellidos").val(),direccion:$("#txtdireccion").val(),numero_documento:$("#txtnumdocumento").val(),telefono:$("#txttelefono").val(),email:$("#txtemail").val(),password:$("#txtpassword").val()}
-                
+    boton.addEventListener('click',function()
+    {
+        if (document.getElementById('create-account').checked){
             
-            }
-        )
-        .done(function(msg){
-           
-            $("#txtnombre").val("");
-            $("#txtapellidos").val("");
-            $("#txtdireccion").val("");
-            $("#txtnumdocumento").val("");
-            $("#txttelefono").val("");
-            $("#txtemail").val("");
-            $("#txtpassword").val("");
-            $("#create-account").checked = false;
+            $.ajax(
+                {
+                    method:"POST",
+                    url:"http://localhost/AngelaMaria/public/api/ingresarCliente",
+                    data:{name:$("#txtnombre").val(),apellidos:$("#txtapellidos").val(),direccion:$("#txtdireccion").val(),numero_documento:$("#txtnumdocumento").val(),telefono:$("#txttelefono").val(),email:$("#txtemail").val(),password:$("#txtpassword").val()}
+                    
+                
+                }
+            )
+            .done(function(msg){
+            
+                $("#txtnombre").val("");
+                $("#txtapellidos").val("");
+                $("#txtdireccion").val("");
+                $("#txtnumdocumento").val("");
+                $("#txttelefono").val("");
+                $("#txtemail").val("");
+                $("#txtpassword").val("");
+                $("#create-account").checked = false;
+                Swal.fire({
+                    title: 'REGISTRADO CORRECTAMENTE AHORA PUEDES INICIAR SESION!',
+                    icon: 'success',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK',
+                    width:'20%',
+                    padding: '3rem',
+        
+                })
+                
+            });
+            
+
+        }else
+        {
             Swal.fire({
-                title: 'REGISTRADO CORRECTAMENTE AHORA PUEDES INICIAR SESION!',
-                icon: 'success',
+                title: 'NECESITAS ACEPTAR LOS TERMINOS Y CONDICIONES!',
+                icon: 'error',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'OK',
                 width:'20%',
                 padding: '3rem',
-    
-              })
-              
-        });
-        
 
-    }else
-    {
-        Swal.fire({
-            title: 'NECESITAS ACEPTAR LOS TERMINOS Y CONDICIONES!',
-            icon: 'error',
-            confirmButtonColor: '#3085d6',
-            confirmButtonText: 'OK',
-            width:'20%',
-            padding: '3rem',
+            })
 
-          })
+            
+        }
 
-          
-    }
+    });
+}
 
-});
 
     var enviarboton = document.getElementById('iniciarsesion');
-
+    if ( window.location.pathname == "/Ecommers-Angela-Maria/view/login/")
+    {
     enviarboton.addEventListener('click',function()
     {
         $(function () {
@@ -145,4 +149,5 @@ boton.addEventListener('click',function()
         });
         
     });
+}
     

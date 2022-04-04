@@ -33,7 +33,6 @@ const cargarCliente = async () => {
 
             document.getElementById('datosCliente').innerHTML = cliente;
         } else {
-            console.log('Hubo un error.');
         }
 
     } catch (error) {

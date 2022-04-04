@@ -7,16 +7,20 @@ MercadoPago\SDK::setAccessToken('TEST-2671414233898062-032205-87911ac1e6b35daa8d
 // Crea un objeto de preferencia
 $preference = new MercadoPago\Preference();
 
-$var_PHP = "<script> document.writeln(Var_JavaScript); </script>";
+// $var_PHP = "<script> document.writeln(Var_JavaScript); </script>";
 
 
 
-echo($var_PHP);
+if (isset($_GET['id'])) {
+    $varid = $_GET['id'];
+}
+
+
 // Crea un ítem en la preferencia
 $item = new MercadoPago\Item();
 $item->title = 'Total';
 $item->quantity = 1;
-$item->unit_price = 75.56;
+$item->unit_price = $varid;
 $item->currency_id ="PEN";
 
 $preference->items = array($item);
@@ -31,13 +35,10 @@ $preference->binary_mode = true;
 
 $preference->save();
 ?>
-    
 	<script src="https://sdk.mercadopago.com/js/v2"></script>
 	<br>
-    <div class="checkout-btn"></div>
+    <div class="checkout-btn" ></div>
     <script>
-
-
             const mp = new MercadoPago("TEST-0c9a7efb-6bd9-4263-8cce-d141d7158aa9", {
                                         locale: "es-PE",
                                     });

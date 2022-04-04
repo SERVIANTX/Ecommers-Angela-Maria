@@ -282,3 +282,14 @@ $(document).ready(function() {
         }
 });
 
+$(document).ready(function() {
+if (localStorage.getItem("carrito") != null){
+    let carrito = JSON.parse(localStorage.getItem("carrito"));
+    var suma2 = 0;
+    for(var i =0;i<carrito.detalle.length;i++){
+        suma2 += Number (carrito.detalle[i].sub_total);
+    }
+    $('#checkout').append("<a href=\"../../view/checkout/index.php?id="+suma2+"\">Ir a pagar <i class=\"fa fa-arrow-circle-right\"></i></a> ");
+    $('#carritobutton').append("<a href=\"../../view/checkout/index.php?id="+suma2+"\" class=\" primary-btn order-submit\">Ir a Pagar</a> ");
+}   
+});
