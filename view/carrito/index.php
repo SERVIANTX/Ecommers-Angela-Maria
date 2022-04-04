@@ -20,88 +20,42 @@
 		</header>
 
 		
+			<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row" >
 
-		<table id="myTable" class="display" cellspacing="0" width="100%">
-			<thead>
-			<tr>
-			<th>Nombre</th>
-			<th>Posición</th>
-			<th>Fecha de inicio</th>
-			<th>Salario</th>
-			</tr>
-			</thead>
-			<tfoot>
-			<tr>
-			<th>Nombre</th>
-			<th>Posición</th>
-			<th>Fecha de inicio</th>
-			<th>Salario</th>
-			</tr>
-			</tfoot>
+				<!-- section title -->
+					<div class="col-md-12" 	style="text-align:center;">
+							<div class="section-title">
+								<h3 class="title">Mi Carrito de Compras</h3>
+							</div>
+					</div>
+		
 
-			<tbody>
-			<tr>
-			<td>Tiger Nixon</td>
-			<td>System Architect</td>
-			<td>2011/04/25</td>
-			<td>$320,800</td>
-			</tr>
-			<tr>
-			<td>Garrett Winters</td>
-			<td>Accountant</td>
-			<td>2011/07/25</td>
-			<td>$170,750</td>
-			</tr>
-			<tr>
-			<td>Ashton Cox</td>
-			<td>Junior Technical Author</td>
-			<td>2009/01/12</td>
-			<td>$86,000</td>
-			</tr>
-			<tr>
-			<td>Cedric Kelly</td>
-			<td>Senior Javascript Developer</td>
-			<td>2012/03/29</td>
-			<td>$433,060</td>
-			</tr>
-			<tr>
-			<td>Airi Satou</td>
-			<td>Accountant</td>
-			<td>2008/11/28</td>
-			<td>$162,700</td>
-			</tr>
-			<tr>
-			<td>Brielle Williamson</td>
-			<td>Integration Specialist</td>
-			<td>2012/12/02</td>
-			<td>$372,000</td>
-			</tr>
-			<tr>
-			<td>Herrod Chandler</td>
-			<td>Sales Assistant</td>
-			<td>2012/08/06</td>
-			<td>$137,500</td>
-			</tr>
-			<tr>
-			<td>Rhona Davidson</td>
-			<td>Integration Specialist</td>
-			<td>2010/10/14</td>
-			<td>$327,900</td>
-			</tr>
-			<tr>
-			<td>Colleen Hurst</td>
-			<td>Javascript Developer</td>
-			<td>2009/09/15</td>
-			<td>$205,500</td>
-			</tr>
+					<table id="carritotabla"  class="table table-bordered" style="text-align:center;">
+						<thead class="thead-dark">
+							<tr>
+							<th scope="col" style="text-align:center;">Nombre</th>
+							<th scope="col" style="text-align:center;">Imagen</th>
+							<th scope="col" style="text-align:center;">Cantidad</th>
+							<th scope="col" style="text-align:center;">Precio</th>
+							<th scope="col" style="text-align:center;">Subtotal</th>
+							<th scope="col" style="text-align:center;">Quitar</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
 
+					</table>
 
-
-
-			</tbody>
-			</table>
-
-			
+					<a href="../../view/checkout/" class="primary-btn order-submit" id="registrarse">Ir a Pagar</a>
+			</div>
+		</div>
+	</div>
 
 
 <!--===============================================================================================-->

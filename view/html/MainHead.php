@@ -41,9 +41,10 @@
 
 
 
-
 <link type="text/css" rel="stylesheet" href="../../assets/css/jquery-ui.css" /> 
 
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
 
 
 

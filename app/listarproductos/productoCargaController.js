@@ -1,17 +1,31 @@
 const cargarProducto = async () => {
     try {
-        
+		
         if (localStorage.getItem("producto") != null) {
             
-            let datos = JSON.parse(localStorage.getItem("producto"));
-            let producto = '';
+            let datosproducto = JSON.parse(localStorage.getItem("producto"));
+
+				let busqueda = [];
+
+				$.each(datosproducto,function(indice,fila){       
+
+					busqueda.push(fila.nombre_producto);
+				});
+				var nombreobtenido = busqueda[0];
+				const respuesta = await fetch("http://localhost/AngelaMaria/public/api/productosdatos/"+nombreobtenido);
+				
+				if (respuesta.status === 200) {
+					const datos = await respuesta.json();
+					listaProductosBuscado = datos.data;
+				let producto = '';
+				datos.data.forEach(data => {
                 producto += `
 				<div class="row">
 					<!-- Product main img -->
 					<div class="col-md-5 col-md-push-1">
 						<div id="product-main-img">
 							<div class="product-preview">
-								<img src="${datos.imagen}" alt="">
+								<img src="${data.imagen}" alt="">
 							</div>
 						</div>
 					</div>
@@ -28,7 +42,7 @@ const cargarProducto = async () => {
 					<!-- Product details -->
 					<div class="col-md-5">
 					<div class="product-details">
-							<h2 class="product-name">${datos.nombre_producto}</h2>
+							<h2 class="product-name">${data.nombre_producto}</h2>
 							<div>
 								<div class="product-rating">
 									<i class="fa fa-star"></i>
@@ -40,10 +54,10 @@ const cargarProducto = async () => {
 								<a class="review-link" href="#">10 Review(s) | Add your review</a>
 							</div>
 							<div>
-								<h3 class="product-price">${datos.precio_venta} <del class="product-old-price">${datos.precio_venta}</del></h3>
+								<h3 class="product-price">S/. ${data.precio_venta} <del class="product-old-price"> S/. ${data.precio_venta}</del></h3>
 								<span class="product-available">In Stock</span>
 							</div>
-							<p>${datos.descripcion}</p>
+							<p>${data.descripcion}</p>
 							
 							<div class="add-to-cart">
 								<div class="qty-label">
@@ -54,7 +68,7 @@ const cargarProducto = async () => {
 										<span class="qty-down">-</span>
 									</div>
 								</div>
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+								<button onclick="comprarBusqueda('${data.id}')" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 							</div>
 
 							<ul class="product-btns">
@@ -296,8 +310,11 @@ const cargarProducto = async () => {
 					<!-- /product tab -->
 				</div>
             `;
+		});
+			document.getElementById('contenedorProducto').innerHTML = producto;
+		};
 
-            document.getElementById('contenedorProducto').innerHTML = producto;
+            
         } else {
             console.log('Hubo un error.');
         }

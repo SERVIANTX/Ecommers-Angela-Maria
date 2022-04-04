@@ -35,6 +35,9 @@
 					<div class="order-notes">
 						<textarea class="input" placeholder="Notas de la Orden"></textarea>
 					</div>
+					<div class="form-group" id="EnviarTotal">
+						
+					</div>
 					<!-- /Order notes -->
 				</div>
 
@@ -48,19 +51,11 @@
 							<div><strong>PRODUCTO</strong></div>
 							<div><strong>TOTAL</strong></div>
 						</div>
-						<div class="order-products">
-							<div class="order-col">
-								<div>1x Product Name Goes Here</div>
-								<div>$980.00</div>
-							</div>
-							<div class="order-col">
-								<div>2x Product Name Goes Here</div>
-								<div>$980.00</div>
-							</div>
+						<div class="order-products" id="productosorder">
+							
 						</div>
-						<div class="order-col">
-							<div><strong>TOTAL</strong></div>
-							<div><strong class="order-total">$2940.00</strong></div>
+						<div class="order-col" id="detallesorder">
+							
 						</div>
 					</div>
 					<!-- <div class="payment-method">
@@ -80,10 +75,10 @@
 						<input type="checkbox" id="terms">
 						<label for="terms">
 							<span></span>
-							Aceptas los <a href="../../view/politicas/">Terminos y Condiciones</a>
+							<a>Aceptas los <a href="../../view/politicas/">Terminos y Condiciones</a>
 						</label>
 					</div>
-					
+					<script src="../../app/listarproductos/capturadorController.js"></script>
 					<div class="form-group" >
 						<?php require "../../app/mercadopago/mercadopago.php" ?>
 					</div>

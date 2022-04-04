@@ -47,7 +47,7 @@ $(document).ready(function() {
                 // Si la respuesta es correcta
                 if (respuesta.status === 200) {
                     const datos = await respuesta.json();
-        
+                    listaProductoscategorias = datos.data;
                     let categoriaproducto = '';
                     datos.data.forEach(data => {
                         categoriaproducto += `
@@ -59,7 +59,7 @@ $(document).ready(function() {
 								<div class="product-body">
 									<p class="product-category">Category</p>
 									<h3 class="product-name"><a href="#">${data.nombre_producto}</a></h3>
-									<h4 class="product-price">${data.precio_venta}</h4>
+									<h4 class="product-price">S/. ${data.precio_venta}</h4>
 									<div class="product-rating">
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -76,7 +76,7 @@ $(document).ready(function() {
 									</div>
 								</div>
 								<div class="add-to-cart">
-									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Añadir al carrito</button>
+									<button onclick="comprarporCategorias('${data.id}')" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Añadir al carrito</button>
 								</div>
 							</div>
 						</div>
@@ -111,10 +111,9 @@ $(document).ready(function() {
         var idcategoria = "id";
         var idobtenida =  getParameter(idcategoria);
 
-        const cargarProductomas = async () => {
+        const cargarmarcas = async () => {
             try {
                 const respuesta = await fetch(`http://localhost/AngelaMaria/public/api/productosmarcas/`+idobtenida);
-                // Si la respuesta es correcta
                 if (respuesta.status === 200) {
                     const datos = await respuesta.json();
         
@@ -147,7 +146,7 @@ $(document).ready(function() {
         
         }
         
-        cargarProductomas();
+        cargarmarcas();
 
 
 });

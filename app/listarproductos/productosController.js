@@ -4,7 +4,7 @@ const cargarProductos = async () => {
         // Si la respuesta es correcta
         if (respuesta.status === 200) {
             const datos = await respuesta.json();
-
+				listaProductosFull = datos.data;
             let productos = '';
             datos.data.forEach(data => {
                 productos += `
@@ -30,7 +30,7 @@ const cargarProductos = async () => {
 						</div>
 					</div>
 					<div class="add-to-cart">
-						<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>  Añadir al carrito</button>
+						<button onclick="comprarAhoraFull('${data.id}')" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>  Añadir al carrito</button>
 					</div>
 					</div>
 					</div>

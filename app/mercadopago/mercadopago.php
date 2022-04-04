@@ -7,6 +7,11 @@ MercadoPago\SDK::setAccessToken('TEST-2671414233898062-032205-87911ac1e6b35daa8d
 // Crea un objeto de preferencia
 $preference = new MercadoPago\Preference();
 
+$var_PHP = "<script> document.writeln(Var_JavaScript); </script>";
+
+
+
+echo($var_PHP);
 // Crea un ítem en la preferencia
 $item = new MercadoPago\Item();
 $item->title = 'Total';

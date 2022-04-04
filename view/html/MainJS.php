@@ -25,7 +25,6 @@
 <script src="../../app/listarproductos/vendidosController.js"></script>
 <script src="../../app/listarproductos/categoriasController.js"></script>
 <script src="../../app/listarproductos/loginRegisterController.js"></script>
-
-
+<script src="../../app/listarproductos/carritoController.js"></script>
 
 
