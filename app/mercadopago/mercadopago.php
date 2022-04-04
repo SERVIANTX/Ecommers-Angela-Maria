@@ -14,6 +14,9 @@ $preference = new MercadoPago\Preference();
 if (isset($_GET['id'])) {
     $varid = $_GET['id'];
 }
+else{
+    $varid = 0;
+}
 
 
 // Crea un ítem en la preferencia

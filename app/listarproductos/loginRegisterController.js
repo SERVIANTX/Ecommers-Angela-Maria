@@ -2,9 +2,9 @@
 
 
 $(document).ready(function() {
-        if(window.location.pathname == "/Ecommers-Angela-Maria/view/checkout/"){
+        if(window.location.pathname == "/Ecommers-Angela-Maria/view/checkout/index.php"){
             var _token = localStorage.getItem('_token');
-
+            
             if(!_token)
             {
                 window.location = "../login";
