@@ -23,7 +23,7 @@ if ( window.location.pathname == "/Ecommers-Angela-Maria/view/login/")
             $.ajax(
                 {
                     method:"POST",
-                    url:"http://localhost/AngelaMaria/public/api/ingresarCliente",
+                    url:"https://apiangelamaria.000webhostapp.com/api/ingresarCliente",
                     data:{name:$("#txtnombre").val(),apellidos:$("#txtapellidos").val(),direccion:$("#txtdireccion").val(),numero_documento:$("#txtnumdocumento").val(),telefono:$("#txttelefono").val(),email:$("#txtemail").val(),password:$("#txtpassword").val()}
                     
                 
@@ -82,7 +82,7 @@ if ( window.location.pathname == "/Ecommers-Angela-Maria/view/login/")
                     
                   $.ajax( {
                             method: "POST",
-                         url: "http://localhost/AngelaMaria/public/api/seguridad/login",
+                         url: "https://apiangelamaria.000webhostapp.com/api/seguridad/login",
                             data: {
                                 email: $("#txtcorreo").val(),
                                 password: $("#txtcontraseña").val(),
@@ -96,7 +96,7 @@ if ( window.location.pathname == "/Ecommers-Angela-Maria/view/login/")
                             localStorage.setItem('_token', response.data.token);
                             $.ajax({
                                 method: "GET",
-                                url: "http://localhost/AngelaMaria/public/api/datosAdmin/"+$("#txtcorreo").val(),
+                                url: "https://apiangelamaria.000webhostapp.com/api/datosAdmin/"+$("#txtcorreo").val(),
                                 headers: {"Authorization": "Bearer "+ response.data.token}
                                 })
                                 .done(function( response ) {

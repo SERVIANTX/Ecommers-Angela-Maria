@@ -5,7 +5,7 @@ $(document).ready(function() {
 
         $.ajax({
             type:'GET',
-            url: "http://localhost/AngelaMaria/public/api/categoriasnombre",
+            url: "https://apiangelamaria.000webhostapp.com/api/categoriasnombre",
             success:function(response)
             {
                
@@ -43,7 +43,7 @@ $(document).ready(function() {
 
         const cargarProductomas = async () => {
             try {
-                const respuesta = await fetch(`http://localhost/AngelaMaria/public/api/productoscategoria/`+idobtenida);
+                const respuesta = await fetch(`https://apiangelamaria.000webhostapp.com/api/productoscategoria/`+idobtenida);
                 // Si la respuesta es correcta
                 if (respuesta.status === 200) {
                     const datos = await respuesta.json();
@@ -113,7 +113,7 @@ $(document).ready(function() {
 
         const cargarmarcas = async () => {
             try {
-                const respuesta = await fetch(`http://localhost/AngelaMaria/public/api/productosmarcas/`+idobtenida);
+                const respuesta = await fetch(`https://apiangelamaria.000webhostapp.com/api/productosmarcas/`+idobtenida);
                 if (respuesta.status === 200) {
                     const datos = await respuesta.json();
         

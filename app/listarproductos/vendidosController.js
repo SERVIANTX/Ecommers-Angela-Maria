@@ -1,6 +1,6 @@
 const cargarProductomas = async () => {
     try {
-        const respuesta = await fetch(`http://localhost/AngelaMaria/public/api/productosmas`);
+        const respuesta = await fetch(`https://apiangelamaria.000webhostapp.com/api/productosmas`);
         // Si la respuesta es correcta
         if (respuesta.status === 200) {
             const datos = await respuesta.json();

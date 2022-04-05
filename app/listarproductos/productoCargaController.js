@@ -12,7 +12,7 @@ const cargarProducto = async () => {
 					busqueda.push(fila.nombre_producto);
 				});
 				var nombreobtenido = busqueda[0];
-				const respuesta = await fetch("http://localhost/AngelaMaria/public/api/productosdatos/"+nombreobtenido);
+				const respuesta = await fetch("https://apiangelamaria.000webhostapp.com/api/productosdatos/"+nombreobtenido);
 				
 				if (respuesta.status === 200) {
 					const datos = await respuesta.json();

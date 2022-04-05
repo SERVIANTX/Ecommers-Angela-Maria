@@ -1,6 +1,6 @@
 const cargarProductos = async () => {
     try {
-        const respuesta = await fetch(`http://localhost/AngelaMaria/public/api/productos`);
+        const respuesta = await fetch(`https://apiangelamaria.000webhostapp.com/api/productos`);
         // Si la respuesta es correcta
         if (respuesta.status === 200) {
             const datos = await respuesta.json();
@@ -61,7 +61,7 @@ $(document).ready(function() {
     
             $.ajax({
                 type:'GET',
-                url: "http://localhost/AngelaMaria/public/api/productosnombre",
+                url: "https://apiangelamaria.000webhostapp.com/api/productosnombre",
                 success:function(response)
                 {
 					let salida = [];
@@ -88,7 +88,7 @@ $(document).ready(function() {
 
 							 $.ajax({
 								type:'GET',
-							 	url: "http://localhost/AngelaMaria/public/api/productosdatos/"+params.equipo,
+							 	url: "https://apiangelamaria.000webhostapp.com/api/productosdatos/"+params.equipo,
 								
 							})
 							.done(function( response ) {
