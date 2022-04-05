@@ -94,22 +94,23 @@ if ( window.location.pathname == "/Ecommers-Angela-Maria/view/login/")
                             
                             
                             localStorage.setItem('_token', response.data.token);
-                            $.ajax({
-                                method: "GET",
-                                url: "https://apiangelamaria.000webhostapp.com/api/datosAdmin/"+$("#txtcorreo").val(),
-                                headers: {"Authorization": "Bearer "+ response.data.token}
-                                })
-                                .done(function( response ) {
-                                    $.each(response,function(indice,fila){       
+                            window.location="../../view/checkout/";
+                            // $.ajax({
+                            //     method: "GET",
+                            //     url: "https://apiangelamaria.000webhostapp.com/api/datosAdmin/"+$("#txtcorreo").val(),
+                            //     headers: {"Authorization": "Bearer "+ response.data.token}
+                            //     })
+                            //     .done(function( response ) {
+                            //         $.each(response,function(indice,fila){       
     
-                                        let cliente = fila;
+                            //             let cliente = fila;
                                         
-                                        localStorage.setItem("Cliente", JSON.stringify(fila));
+                            //             localStorage.setItem("Cliente", JSON.stringify(fila));
     
-                                        });
+                            //             });
     
-                                        window.location="../../view/checkout/";
-                                    });
+                                        
+                            //         });
                             
                         });
                         
